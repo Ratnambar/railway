@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	 <a class="navbar-brand" href="/home">Railway App</a>
+	 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			 <ul class="navbar-nav mr-auto">
+				 <li class="nav-item active">
+					 <a class="nav-link" href="/home">Home</a>
+				 </li>
+				 <li class="nav-item">
+					 <a class="nav-link" href="/live" >Live-Status</a>
+				 </li>
+
+				 <li class="nav-item">
+					 <a class="nav-link " href="/between" tabindex="">Train Between Stations</a>
+				 </li>
+				 <li class="nav-item">
+					 <a class="nav-link" href="/">Train Route</a>
+				 </li>
+				 <li class="nav-item">
+					 <a class="nav-link" href="/about">About Us</a>
+				 </li>
+				 <li class="nav-item">
+					 <a class="nav-link" href="/contact">contactUs</a>
+				 </li>
+			 </ul>
+	 </div>
+</nav>
+</head>
+<body>
+	<div class="bg-img">
+   <form action="/trainBetween" method="post" class="container" >
+		 <label for="Source Station Code"><b>From:</b></label>
+    	<input type="text" name="srcStn" placeholder="Enter Station Code:" required><br>
+
+		<label for="Destination Station Code"><b>To:</b></label>
+   	<input type="text" name="destStn" placeholder="Enter Station Code:" required><br>
+   	<input type="text" placeholder="DD-MM-YYYY" name="date" placeholder="Date:" required><br>
+   	     <input type="submit" name="submit" value="go">
+   </form>
+ </div>
+</body>
+
+<style>
+
+
+/* ul li a:hover{
+	background-color: green;
+	  background: #f1f1f1;
+
+} */
+
+
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("12.jpg");
+
+  /* min-height: 380px; */
+	height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* form{
+	align:"center";
+	width: 300px;
+	margin: 0 auto;
+}
+form,input{
+	border-radius: 25px;
+	padding: 20px;
+  width: 190px;
+  height: 35px;
+}
+body{
+
+	background-color: skyblue;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333333;
+}
+li{
+	float: left;
+}
+li a{
+	display: block;
+	color: green;
+	text-align: center;
+	padding: 16px;
+}
+li a:hover{
+	background-color: #111111;
+} */
+
+</style>
+
+
+</html>

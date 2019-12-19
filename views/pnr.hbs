@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>My page</title>
+
+  <h1 style="color: blue; background-color: gray; background-size:200 px 500px;padding: 15px;"><marquee behavior="scroll" direction="right">RAILWAY APP</marquee></h1>
+
+   {{>header}}
+  </head>
+
+  <body>
+
+<div class="container">
+<table class="table" border="2" align="center">
+<tr>
+<th>Pnr No.</th>
+<th>Tot Pass</th>
+<th>Chart Status</th>
+<th>SrcStn</th>
+<th>DestStn</th>
+<th>BoardStn</th>
+<th>UpToStn</th>
+<th>TrainName</th>
+<th>TrainNo.</th>
+<th>Class</th>
+<th colspan="6">Passengers</th>
+
+</tr>
+
+
+   <tr>
+  <td><div>{{pnr}} - {{doj}}</div></td>
+  <td><div>{{total_passengers}}</div></td>
+  <td><div>{{chart_prepared}}</div></td>
+  <td><div>{{from_station.name}}</div></td>
+  <td><div>{{to_station.name}}</div></td>
+  <td><div>{{boarding_point.name}}</div></td>
+  <td><div>{{reservation_upto.name}}</div></td>
+  <td><div>{{train.name}}</div></td>
+  <td><div>{{train.number}}</div></td>
+  <td><div>{{journey_class.code}}</div></td>
+  {{#each passengers}}
+
+    <td><div>{{this.no}}</div></td>
+    <td><div>{{this.current_status}}</div></td>
+    <td><div>{{this.booking_status}}</div></td>
+  {{/each}}
+</tr>
+
+</table>
+</div>
+</body>
+
+
+
+<style >
+  body{
+    background-color: skyblue;
+      }
+
+
+      table,th,td{
+        border: 1px solid green;
+      border-collapse: collapse;
+       }
+    table,th
+    {
+      background-color: gray;
+    }
+    tr:nth-child(even)
+    {
+      background-color: #dddddd;
+    }
+      tr:nth-child(odd)
+      {
+        background-color: #fff;
+      }
+  </style>
+</html>

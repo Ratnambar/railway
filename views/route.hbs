@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>My page</title>
+
+    {{> header}}
+  </head>
+  <h3>
+<td><div><a href="">{{train.name}}</a> - {{train.number}}</div></td>
+</h3>
+  <body>
+    <div class="container">
+    <table class="table" border="2" align="center">
+    <tr>
+    <th>No.</th>
+    <th>SchArr</th>
+    <th>SchDep</th>
+    <th>Dist</th>
+    <th>Halt</th>
+    <th>Stn-Name</th>
+    <th>Stn-Code</th></tr>
+
+
+
+
+    {{#each route}}
+    <tr>
+
+        <td><div>{{this.no}}</div></td>
+        <td><div>{{this.scharr}}</div></td>
+        <td><div>{{this.schdep}}</div></td>
+        <td><div>{{this.distance}}</div></td>
+        <td><div>{{this.halt}}</div></td>
+      &nbsp&nbsp<td><div>{{this.station.name}}</div></td>
+      <td><div> {{this.station.code}}</div></td></tr>
+      {{/each}}
+
+    </table>
+    </div>
+</body>
+<style >
+  /* body{
+    background-color: skyblue;
+      } */
+      /* ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+      }
+      li{
+        float: left;
+      }
+      li a{
+        display: block;
+        color: green;
+        text-align: center;
+        padding: 16px;
+      }
+      li a:hover{
+        background-color: #111111;
+      } */
+
+      table,th,td{
+        border: 1px solid green;
+      border-collapse: collapse;
+       }
+    table,th
+    {
+      background-color: gray;
+    }
+    tr:nth-child(even)
+    {
+      background-color: #dddddd;
+    }
+      tr:nth-child(odd)
+      {
+        background-color: #fff;
+      }
+  </style>
+</html>

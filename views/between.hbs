@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>My page</title>
+    <h1 style="color: blue; background-color: gray; background-size:200 px 500px;padding: 15px;"><marquee behavior="scroll" direction="right">Welcome to the Indian Railway</marquee></h1>
+    <h2>
+      <ul>
+        <li><a href="">Live Status</a></li>
+        <li><a href="">Train Between</a></li>
+        <li><a href="">Train Route</a></li>
+      </ul>
+    </h2>
+  </head>
+
+ <!--  <style >
+      table,th,td{border: 1px solid black;
+      border-collapse: collapse;
+    background-color: #ee82ee;}
+  </style> -->
+  <body>
+
+  <!-- {{#each train.days}}
+       <div>{{this.code}} - {{this.runs}}</div>
+{{/each}} -->
+<div class="bg-img">
+<table border="2" align="center">
+<tr>
+<th>No.</th>
+<th>Name</th>
+<th>TrvTime</th>
+<th>SrcTime</th>
+<th>DestTime</th>
+<th>Stn-Name</th>
+<th>Stn-Code</th>
+
+</tr>
+
+{{#each trains}}
+<tr>
+  <!-- <ol> -->
+    <td><div><a href="">{{this.number}}</a></div></td>
+
+    <td><div><a href="">{{this.name}}</a></div></td>
+    <td><div>{{this.travel_time}}</div></td>
+    <td><div>{{this.src_departure_time}}</div></td>
+    <td><div>{{this.dest_arrival_time}}</div></td>
+    &nbsp&nbsp<td><div>{{this.from_station.name}}</div></td>
+    <td><div> {{this.from_station.code}}</div></td>
+    <td><div>{{this.to_station.code}}</div></td>
+    <td><div>{{this.to_station.name}}</div></td>
+
+    {{#each classes}}
+    <td><div>{{this.code}}</div></td>
+    <td><div>{{this.available}}</div></td>
+    <!-- <td><div>{{this.name}}</div></td> -->
+
+
+    {{#each days}}
+    <div>{{this.code}}</div>
+    <div>{{this.runs}}</div>
+    {{/each}}
+
+    {{/each}}
+
+
+
+  {{/each}}
+  </tr>
+
+</table>
+</div>
+</body>
+<style type="text/css">
+
+table{
+  opacity: 0.7;
+  color: black;
+  /* filter: Alpha(opacity=50); */
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("14.jpg");
+
+  /* min-height: 380px; */
+	height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+  body{background-color: skyblue;}
+ ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+      }
+      li{
+        float: left;
+      }
+      li a{
+        display: block;
+        color: green;
+        text-align: center;
+        padding: 16px;
+      }
+      li a:hover{
+        background-color: #111111;
+      }
+
+
+      table,th,td{
+        border: 1px solid green;
+      border-collapse: collapse;
+       }
+    table,th
+    {
+      background-color: gray;
+    }
+    tr:nth-child(even)
+    {
+      background-color: #dddddd;
+
+    }
+      tr:nth-child(odd)
+      {
+        background-color: #fff;
+      }
+
+
+      /* table,th,td{
+        border: 1px solid green;
+      border-collapse: collapse;
+       }
+    table,th
+    {
+      background-color: gray;
+    }
+    tr:nth-child(even)
+    {
+      background-color: #dddddd;
+    }
+      tr:nth-child(odd)
+      {
+        background-color: #fff;
+      }  */
+      </style>
+</html>

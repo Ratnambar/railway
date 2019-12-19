@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Live-Status</title>
+</head>
+<body>
+   <form action="/AvlSeat" method="post">
+   	Train No:<input type="text" name="tnum"  required><br>
+   Source-Station Code:<input type="text" name="SrcstnCode"  required><br>
+   Destination-Station Code:<input type="text" name="DeststnCode"  required><br>
+   Date:<input type="text" placeholder="DD-MM-YYYY" name="date"  required><br>
+   Class-Code <select name="pref">
+  <option value="1A">First AC</option>
+  <option value="2A">AC 2-Tier</option>
+  <option value="3A">AC 3-tier</option>
+  <option value="FC">First Class</option>
+  <option value="CC">AC Chair Car</option>
+  <option value="SL">Sleeper</option>
+  <option value="2S">Second Sitting</option>
+</select><br>
+
+     Quota:<select name="quota">
+  <option value="GN">General Quota</option>
+  <option value="LD">Ladies Quota</option>
+  <option value="HO">Head quarters/high official Quota</option>
+  <option value="DF">Defence Quotas</option>
+  <option value="PH">Parliament house Quota</option>
+  <option value="FT">Foreign Tourist Quota</option>
+  <option value="DP">Duty Pass Quota</option>
+  <option value="tq">Tatkal Quota</option>
+  <option value="PT">Premium Tatkal Quota</option>
+  <option value="SS">AC 3-tier</option>
+  <option value="HP">First Class</option>
+  <option value="RE">AC Chair Car</option>
+  <option value="SL">Sleeper</option>
+  <option value="GNRS">Second Sitting</option>
+  <option value="OS">First AC</option>
+  <option value="PQ">AC 2-Tier</option>
+  <option value="RC">AC 3-tier</option>
+  <option value="YU">First Class</option>
+  <option value="LB">AC Chair Car</option>
+ 
+</select><br>
+   	     <input type="submit" name="submit">
+   </form>
+</body>
+</html>

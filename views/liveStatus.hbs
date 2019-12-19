@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <title>My page</title>
+    <h1 style="color: blue; background-color: gray; background-size:200 px 500px;padding: 15px;"><marquee behavior="scroll" direction="right">RAILWAY APP</marquee></h1>
+    {{>header}}
+  </head>
+   <!-- -><style >
+      table,th,td{border: 1px solid black;
+      border-collapse: collapse;
+    background-color: red;}
+  </style> -->
+  <body>
+
+
+  <div>{{position}}</div>
+<div>{{train.number}}</div>
+<div>{{train.name}}</div>
+<div class="container">
+<table class="table" border="2" align="center">
+  <tr>
+    <th>th1</th>
+    <th>th2</th>
+    <th>th3</th>
+    <th>th4</th>
+    <th>th5</th>
+    <th>th6</th>
+    <th>th7</th>
+     <th>th8</th>
+</tr>
+
+
+{{#each route}}
+<tr>
+  <!-- <td><div>{{this.no}}</div></td>
+  <td><div>{{this.day}}</div></td> -->
+  <td><div>{{this.station.name}}</div></td>
+   <td><div>{{this.has_arrived}}</div></td>
+   <td><div>{{this.has_departed}}</div></td>
+   <!-- <td><div>{{this.distance}}</div></td> -->
+   <td><div>{{this.scharr}}</div></td>
+   <td><div>{{this.schdep}}</div></td>
+
+</tr>
+  {{/each}}
+</table>
+</div>
+
+</body>
+
+<style >
+  body{
+    background-color: skyblue;
+      }
+
+
+      table,th,td{
+        border: 1px solid green;
+      border-collapse: collapse;
+       }
+    table,th
+    {
+      background-color: gray;
+    }
+    tr:nth-child(even)
+    {
+      background-color: #dddddd;
+    }
+      tr:nth-child(odd)
+      {
+        background-color: #fff;
+      }
+  </style>
+</html>
